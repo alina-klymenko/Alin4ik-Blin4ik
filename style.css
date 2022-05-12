@@ -7,8 +7,53 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1652%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1653)'%3e%3c/rect%3e%3cpath d='M1005.67 363.51 a142.27 142.27 0 1 0 284.54 0 a142.27 142.27 0 1 0 -284.54 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1276.6914013895905 132.27254529281635L1417.591055016669 164.80179345591836 1309.2206495526925-8.627108334262289z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M222.0009835747481 229.97173227531408L217.10189770205386 370.26319618053947 357.39336160727925 375.1622820532337 362.2924474799735 234.8708181480083z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M344.1481801001845 386.85710468508637L306.7152611913182 434.7690560110519 397.29964763469957 466.9624587113685z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M835.061456437041 213.28821590806194L993.3401197505915 210.52545156317242 990.577355405702 52.246788249621915 832.2986920921514 55.00955259451143z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M207.8990760885606 259.13192853665186L212.71760205131574 121.14739861689091 69.91454616879966 254.31340257389672z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M155.68919903956942 423.75743199010657L66.644394796721 429.9840512709429 161.91581832040578 512.802236232955z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M932.9920818624029 242.3675351916648L954.9030068848697 398.27186768595556 1088.8964143566936 220.45661016919794z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M695.0660955249363 398.1210187920411L661.4829047631181 556.1175092224498 819.4793951935268 589.7006999842681 853.062585955345 431.70420955385936z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1652'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='139.29%25' x2='84.72%25' y2='-39.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1653'%3e%3cstop stop-color='rgba(196%2c 199%2c 202%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(252%2c 230%2c 255%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
     background-size: cover;
 }
+.mask{
+    width: 100%;
+    height: 100%;
+    background: lavenderblush;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 10px solid;#603f33 rgba(13,71,161,0.6);
+    border-radius: 50%;
+    border-left-color: lightgray;
+    animation: loader 1.3s linear infinite;
 
+}
+.loader-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: loaderImg .5s linear infinite;
+}
+
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes loaderImg{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes loaderImgScale{
+    100%{
+        transform: scale(50);
+    }
+}
 .container {
     display: flex;
 
@@ -42,8 +87,6 @@ body {
     width: 200px;
     margin: 30px 30px;
     padding: 30px;
-
-
     background-color: #eae2e3;
     box-shadow: 0 7px 10px #f0d0c1;
     border-radius: 7px;
@@ -57,18 +100,8 @@ body {
     height: 300px;
     width: 200px;
     margin: 30 auto;
-    animation-name: card-photo;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
 }
-@keygraames card-photo {
-    0% {
-    left:0;
-}
-    100 {
-    left:700px;
-}
-}
+
 
 .card-title {
     border-width: 2px;
@@ -100,3 +133,4 @@ body {
 .text:hover p {
     transform: rotate(10deg);
 }
+
