@@ -18,6 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: loading 2s ease forwards;
+    visibility: visible;
 
 }
 .loader{
@@ -26,17 +28,22 @@ body {
     justify-content: center;
     width: 150px;
     height: 150px;
-    border: 10px solid;#603f33 rgba(13,71,161,0.6);
+    border: 10px solid;
     border-radius: 50%;
     border-left-color: lightgray;
-    animation: loader 1.3s linear infinite;
+    animation: loading 3s ease forwards;
+    animation-delay: .5s;
+
 
 }
 .loader-image{
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    animation: loaderImg .5s linear infinite;
+    animation: loaderImg 1s ease forwards;
+}
+.done{
+    display: none;
 }
 
 @keyframes loader{
@@ -54,6 +61,14 @@ body {
         transform: scale(50);
     }
 }
+@keyframes loading {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
 .container {
     display: flex;
 
@@ -61,14 +76,16 @@ body {
 
 .title {
     background-color: #eae2e3;
-    margin: 400;
+    margin: 70px;
+    padding: 5px;
     border-width: 2px;
     border-style: solid;
     border-color: inherit;
     display: flex;
     overflow: hidden;
-    border-right: 5px solid pink;
+    border-right: 2px solid pink;
     animation:flashing-border 2s step-end infinite;
+
 
 }
 @keyframes flashing-border {
@@ -99,7 +116,7 @@ body {
     display: block;
     height: 300px;
     width: 200px;
-    margin: 30 auto;
+    margin: 30px auto;
 }
 
 
